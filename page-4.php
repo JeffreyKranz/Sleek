@@ -51,9 +51,8 @@
 					</a>
 				</div>
 			</div>
-			
-				<div class="textBar"><?php the_field(text_bar_2)?>
-				</div>
+			<div class="textBar"><?php the_field(text_bar_2)?>
+			</div>
 				<div class="posts-recent">
 					<ul>
 						<?php
@@ -65,7 +64,11 @@
 						?>
 					</ul>
 				</div>
-			
+			<div class="final-cta" style="padding: 40px; font-size: 30pt">
+				<div style="margin-bottom: 30px;"><?php the_field(final_cta)?></div>
+				<?php the_field(form)?>
+			</div>
+
 
 			<?php do_action('foundationPress_page_before_entry_content'); ?>
 

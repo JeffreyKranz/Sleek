@@ -54,7 +54,7 @@ $blue: #3377ff;
 }
 
 .grayBackground {
-	background-color: $darkGray;
+	background: rgba(175,175,175,0.5);
 	text-align: left;
 	color: white;
 }
@@ -94,6 +94,26 @@ img.icon-image {
 	margin-left:auto;
 	margin-right:auto;
 	width:70%;
+}
+
+div.final-cta {
+	color: #ffffff;
+	text-align: center;
+	background-color: $teal;
+	padding-top: 40px;
+	padding-bottom: 100px;
+	form {
+		margin: 1em 0;
+	}
+	button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="reset"] {
+		font-size: 20pt;
+		padding-bottom: 15px;
+		padding-top: 15px;
+		padding-right: 30px;
+		padding-left: 30px;
 }
 
 /**
