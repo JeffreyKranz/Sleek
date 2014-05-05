@@ -22,42 +22,62 @@
 					<div class="hexagonC"></div>
 				</a>	
 			</div> -->
-			<div class="icon-column">
-				<a href="<?php the_field('icon_left_link');?>">
-					<img src="<?php the_field('icon_left');?>" />
-				</a>				
-				<p><?php the_field('icon_left_text');?></p>
-				<a href="<?php the_field('icon_left_link');?>)">
-					<button><?php the_field('icon_left_button_text')?></button>
-				</a>
+			<div style="display: inline-block; width: 100%;">
+				<div class="icon-column">
+					<a href="<?php the_field('icon_left_link');?>">
+						<img class="icon-image" src="<?php the_field('icon_left');?>" />
+					</a>				
+					<?php the_field('icon_left_text');?>
+					<a href="<?php the_field('icon_left_link');?>)">
+						<button><?php the_field('icon_left_button_text')?></button>
+					</a>
+				</div>
+				<div class="icon-column">
+					<a href="<?php the_field('icon_center_link');?>">
+						<img class="icon-image" src="<?php the_field('icon_center');?>" />
+					</a>				
+					<?php the_field('icon_center_text');?>
+					<a href="<?php the_field('icon_center_link');?>">
+						<button><?php the_field('icon_center_button_text');?></button>
+					</a>
+				</div>
+				<div class="icon-column">
+					<a href="<?php the_field('icon_right_link');?>">
+						<img class="icon-image" src="<?php the_field('icon_right');?>" />
+					</a>				
+					<?php the_field('icon_right_text');?>
+					<a href="<?php the_field('icon_right_link');?>">
+						<button><?php the_field('icon_right_button_text');?></button>
+					</a>
+				</div>
 			</div>
-			<div class="icon-column">
-				<a href="<?php the_field('icon_center_link');?>">
-					<img src="<?php the_field('icon_center');?>" />
-				</a>				
-				<p><?php the_field('icon_center_text');?></p>
-				<a href="<?php the_field('icon_center_link');?>">
-					<button><?php the_field('icon_center_button_text');?></button>
-				</a>
-			</div>
-			<div class="icon-column">
-				<a href="<?php the_field('icon_right_link');?>">
-					<img src="<?php the_field('icon_right');?>" />
-				</a>				
-				<p><?php the_field('icon_right_text');?></p>
-				<a href="<?php the_field('icon_right_link');?>">
-					<button><?php the_field('icon_right_button_text');?></button>
-				</a>
-			</div>
+			
+				<div class="textBar"><?php the_field(text_bar_2)?>
+				</div>
+				<div class="posts-recent">
+					<ul>
+						<?php
+							$args = array( 'numberposts' => '3' );
+							$recent_posts = wp_get_recent_posts( $args );
+							foreach( $recent_posts as $recent ){
+								echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
+							}
+						?>
+					</ul>
+				</div>
+			
+
 			<?php do_action('foundationPress_page_before_entry_content'); ?>
 
-			<footer>
+			<!-- <footer>
 				<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'FoundationPress'), 'after' => '</p></nav>' )); ?>
 				<p><?php the_tags(); ?></p>
 			</footer>
 			<?php do_action('foundationPress_page_before_comments'); ?>
 			<?php comments_template(); ?>
-			<?php do_action('foundationPress_page_after_comments'); ?>
+			<?php do_action('foundationPress_page_after_comments'); ?> -->
+
+
 		</article>
 	<?php endwhile;?>
 

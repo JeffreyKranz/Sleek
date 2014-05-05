@@ -79,11 +79,22 @@ $blue: #3377ff;
 .icon-column {
 	float: left;
 	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
 	width: 33%;
 	padding: 50px;
 }
 
+img.icon-image {
+	margin-bottom: 25px;
+}
 
+.posts-recent {
+	margin: 0;
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+}
 
 /**
  * 3.1 Pages
