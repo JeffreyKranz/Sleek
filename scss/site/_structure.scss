@@ -34,6 +34,12 @@ $blue: #3377ff;
 	text-align: center;
 }
 
+h1 {
+	font-size: 50pt;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
 /**
  * 2.0 Header, sidebar and footer
  * ----------------------------------------------------------------------------
@@ -67,13 +73,16 @@ $blue: #3377ff;
 	padding: 20px;
 }
 
-.textBar {
+div.textBar {
 	color: #ffffff;
 	text-align: center;
 	font-size: 40pt;
 	background-color: $teal;
 	padding-top: 40px;
 	padding-bottom: 40px;
+	h2 {
+		color: #ffffff;
+	}
 }
 
 .icon-column {
@@ -116,6 +125,60 @@ div.final-cta {
 		padding-left: 30px;
 	}
 	// Note from David: added the above bracket. I think that was the problem!
+}
+
+div.author {
+	img {
+		float: left;
+		margin-left: 50px;
+		margin-right: 50px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		border-radius: 200px;
+		border: 10px solid $gold;
+
+	}
+	.bio {
+	text-align: left;
+	float: right;
+	max-width: 50%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-right: 50px;
+
+	}
+	hr {
+		opacity: 0;
+	}
+}
+
+.lp-product {
+	float: left;
+	margin-left: 100px;
+	margin-right: 150px;
+}
+
+div.endorsement {
+	width: 100%;
+	img {
+		float: left;
+		margin-left: 50px;
+		margin-right: 50px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		border-radius: 200px;
+		border: 10px solid $darkGray;
+		// vertical-align: middle;
+
+	}
+	.plug {
+	text-align: left;
+	float: left;
+	width: 50%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-right: 50px;
+	}
 }
 
 /**
